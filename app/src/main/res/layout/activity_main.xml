@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgApp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/imgApp"
+            android:src="@drawable/ic_note"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/TextExtra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/tvTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/imgApp"
+            app:layout_constraintStart_toEndOf="@+id/imgApp"
+            app:layout_constraintTop_toTopOf="@+id/imgApp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAbout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/background"
+            android:contentDescription="@string/btnAbout"
+            android:src="@drawable/ic_info"
+            app:elevation="0dp"
+            app:fabCustomSize="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgApp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgApp"
+            app:tint="@color/theme" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvNotesNumber"
+            style="@style/TextNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Items 0"
+            app:layout_constraintBottom_toBottomOf="@+id/btnAddNewNote"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAddNewNote"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/background"
+            android:contentDescription="@string/btnAbout"
+            android:src="@drawable/ic_add"
+            app:elevation="0dp"
+            app:fabCustomSize="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnRefreshNotes"
+            app:layout_constraintEnd_toStartOf="@+id/btnRefreshNotes"
+            app:layout_constraintTop_toTopOf="@+id/btnRefreshNotes"
+            app:tint="@color/theme" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnRefreshNotes"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/background"
+            android:contentDescription="@string/btnAbout"
+            android:src="@drawable/ic_refresh"
+            app:elevation="0dp"
+            app:fabCustomSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/theme" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvNotesEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvNotesEmpty"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcNotes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

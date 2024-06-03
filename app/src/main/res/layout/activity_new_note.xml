@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".activity.NewNoteActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayNewNoteName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/red"
+            app:errorContentDescription="The file name is empty."
+            android:hint="File name"
+            android:paddingStart="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtNewNoteName"
+                style="@style/TextNormal"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSaveNewNote"
+            style="@style/TextNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/background"
+            android:text="Save"
+            android:textColor="@color/theme" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/txtNewNoteContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:gravity="start|top"
+        android:hint="Content"
+        android:inputType="textMultiLine"
+        android:paddingStart="5dp" />
+
+
+</LinearLayout>

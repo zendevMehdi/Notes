@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextBase">
+        <item name="android:textColor">@color/foreground</item>
+    </style>
+
+    <style name="TextExtra" parent="TextBase">
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="TextBig" parent="TextBase">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="TextNormal" parent="TextBase">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TextSmall" parent="TextBase">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+</resources>

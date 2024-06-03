@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="btnAbout">About Notes</string>
+    <string name="tvTitle">Notes</string>
+    <string name="imgApp">Application icon</string>
+    <string name="tvNotesEmpty">There is no notes.\nAdd new note by pressing + button</string>
+    <string name="tvNoteName">Name</string>
+    <string name="tvNoteContent">Content</string>
+</resources>
